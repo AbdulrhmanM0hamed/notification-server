@@ -49,7 +49,17 @@ app.post('/send-notification', async (req, res) => {
         included_segments: ['All'],
         headings: { en: title, ar: title },
         contents: { en: message, ar: message },
-        data: data || {}
+        data: data || {},
+        // Configuración de sonido para Android e iOS
+        android_sound: "notification",
+        ios_sound: "notification.wav",
+        android_channel_id: "health_tips_channel",
+        // Asegurar prioridad alta
+        priority: 10,
+        // Configuración adicional para asegurar entrega
+        ttl: 86400,
+        collapse_id: 'health_tips',
+        mutable_content: true
       },
       {
         headers: {
@@ -104,7 +114,17 @@ app.post('/send-notification-to-users', async (req, res) => {
         include_external_user_ids: userIds,
         headings: { en: title, ar: title },
         contents: { en: message, ar: message },
-        data: data || {}
+        data: data || {},
+        // Configuración de sonido para Android e iOS
+        android_sound: "notification",
+        ios_sound: "notification.wav",
+        android_channel_id: "health_tips_channel",
+        // Asegurar prioridad alta
+        priority: 10,
+        // Configuración adicional para asegurar entrega
+        ttl: 86400,
+        collapse_id: 'health_tips',
+        mutable_content: true
       },
       {
         headers: {
