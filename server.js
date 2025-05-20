@@ -53,7 +53,6 @@ app.post('/send-notification', async (req, res) => {
         // Configuración de sonido para Android e iOS
         android_sound: "notification",
         ios_sound: "notification.wav",
-        android_channel_id: "health_tips_channel",
         // Asegurar prioridad alta
         priority: 10,
         // Configuración adicional para asegurar entrega
@@ -118,7 +117,6 @@ app.post('/send-notification-to-users', async (req, res) => {
         // Configuración de sonido para Android e iOS
         android_sound: "notification",
         ios_sound: "notification.wav",
-        android_channel_id: "health_tips_channel",
         // Asegurar prioridad alta
         priority: 10,
         // Configuración adicional para asegurar entrega
