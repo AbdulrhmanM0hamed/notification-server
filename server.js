@@ -50,9 +50,8 @@ app.post('/send-notification', async (req, res) => {
         headings: { en: title, ar: title },
         contents: { en: message, ar: message },
         data: data || {},
-        // Configuración de sonido para Android e iOS
-        android_sound: "notification",
-        ios_sound: "notification.wav",
+        // Usar sonido predeterminado del dispositivo
+        // Se han eliminado los sonidos personalizados
         // Asegurar prioridad alta
         priority: 10,
         // Configuración adicional para asegurar entrega
@@ -114,9 +113,8 @@ app.post('/send-notification-to-users', async (req, res) => {
         headings: { en: title, ar: title },
         contents: { en: message, ar: message },
         data: data || {},
-        // Configuración de sonido para Android e iOS
-        android_sound: "notification",
-        ios_sound: "notification.wav",
+        // Usar sonido predeterminado del dispositivo
+        // Se han eliminado los sonidos personalizados
         // Asegurar prioridad alta
         priority: 10,
         // Configuración adicional para asegurar entrega
